@@ -43,8 +43,8 @@ const Hero: React.FC = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  href="/ashvin-resume.pdf"
-                  download
+                  href="/ashvin-resume.pdf"  // Make sure this matches the file name in public folder
+                  download="ashvin-resume.pdf"  // Add the download attribute with filename
                   icon={<Download size={20} />}
                   className="border-2 transform hover:-translate-y-1 transition-all duration-300"
                 >
