@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description:
       'A full-featured accommodation booking platform with property listings, user authentication, real-time booking, and secure payments. Includes image uploads and Google authentication.',
     image:
-      'https://www.figma.com/community/resource/679a3fdb-67bd-40ce-a93c-3497d53edfdc/thumbnail',
+      'https://mir-s3-cdn-cf.behance.net/project_modules/1400/a1814a112355529.603d82c702de5.jpg',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind', 'Shadcn', 'JWT', 'Cloudinary', 'Google Auth'],
     demoLink: 'https://ease-nest.netlify.app/login',
     githubLink: 'https://ease-nest.netlify.app/login',
