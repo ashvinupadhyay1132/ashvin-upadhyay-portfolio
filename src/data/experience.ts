@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     id: 2,
     company: 'Digitalrooar PVT LTD',
     position: 'Node Js Developer',
-    duration: 'Mar 2024 - Apr 2025',
+    duration: 'Mar 2025 - Apr 2025',
     description: 'Building scalable backend services with Node.js, designing RESTful APIs, and optimizing database performance. Implementing secure authentication and managing cloud infrastructure.',
     technologies: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'TypeScript','AWS'],
     logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6yvaog3scvAlJBR_Kkh5jntmLvByEWZ6oA&s',
