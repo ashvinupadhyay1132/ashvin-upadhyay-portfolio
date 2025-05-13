@@ -46,7 +46,7 @@ export const projects: Project[] = [
       'A modern resume builder with customizable templates, real-time preview, and PDF export. Create professional, ATS-friendly CVs with multiple themes.',
     image:
       'https://images01.nicepagecdn.com/page/15/45/website-design-preview-154534.jpg',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux'],
+    tags: ['React','Redux','HTML','CSS','JavaScript'],
     demoLink: 'https://testanalytics-5e6e3.web.app/',
     githubLink: 'https://github.com/ashvinupadhyay1132/Resume-Builder',
     // featured: true,
