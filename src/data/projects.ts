@@ -24,7 +24,7 @@ export const projects: Project[] = [
     image:
       'https://cdn.dribbble.com/userupload/4171124/file/original-345de0be93c3ac84e27f202fd13b7ee6.jpg?format=webp&resize=400x300&vertical=center',
     demoLink: 'https://www.newshunt.blog/',
-    githubLink: 'https://github.com/ashvinupadhyay1132',
+    githubLink: 'https://github.com/ashvinupadhyay1132/news',
     featured: true,
   },
   {
