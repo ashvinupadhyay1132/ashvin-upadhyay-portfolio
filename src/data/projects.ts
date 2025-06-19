@@ -64,13 +64,18 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: 'Image Converter Tool',
+
+    title: 'Trending News Feed',
+
     description:
-      'A web-based tool for converting images between different formats with support for bulk conversion, resizing, and optimization. Features include drag-and-drop interface and instant preview.',
-    image:
-      'https://lp.simplified.com/siteimages/design/Locate-Projects-Quickly-with-Shared-Folders.png',
-    tags: ['React', 'HTML', 'CSS', 'JavaScript'],
-    demoLink: 'https://image-converter-eta-eight.vercel.app/',
-    githubLink: 'https://github.com/ashvinupadhyay1132/image-converter',
+      'TrendingNewsFeed.in brings you breaking news, viral stories, live news, politics, cricket, Bollywood, tech,today's trending headlines across India.',
+
+    image: 'https://images.app.goo.gl/zHgsXkLmHmjWaCUB9',
+
+    tags: ['HTML', 'CSS', 'JavaScript', 'Google App Script'],
+
+    demoLink: 'https://www.trendingnewsfeed.in',
+    githubLink: 'https://github.com/ashvinupadhyay1132',
   },
+    featured: true,
 ];
