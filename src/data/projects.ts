@@ -17,65 +17,58 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "News Hunt",
+    title: 'News Hunt',
     description:
-      "A content management system for blogs with markdown support, image uploads, user roles, and SEO optimization.",
+      'A content management system for blogs with markdown support, image uploads, user roles, and SEO optimization.',
+    tags: ['Next.js', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'JWT', 'Material UI', 'Shadcn'],
     image:
-      "https://cdn.dribbble.com/userupload/4171124/file/original-345de0be93c3ac84e27f202fd13b7ee6.jpg?format=webp&resize=400x300&vertical=center",
-    tags: ['Next.js','Node.js','Express','MongoDB','Cloudinary','JWT','Material UI', 'Shadcn'],
-    demoLink: "https://www.newshunt.blog/",
-    githubLink: "https://github.com/ashvinupadhyay1132",
+      'https://cdn.dribbble.com/userupload/4171124/file/original-345de0be93c3ac84e27f202fd13b7ee6.jpg?format=webp&resize=400x300&vertical=center',
+    demoLink: 'https://www.newshunt.blog/',
+    githubLink: 'https://github.com/ashvinupadhyay1132',
     featured: true,
   },
   {
     id: 3,
-    title: 'Airbnb',
+    title: 'Trending News Feed',
     description:
-      'A full-featured accommodation booking platform with property listings, user authentication, real-time booking, and secure payments. Includes image uploads and Google authentication.',
-    image:
-      'https://mir-s3-cdn-cf.behance.net/project_modules/1400/a1814a112355529.603d82c702de5.jpg',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind', 'Shadcn', 'JWT', 'Cloudinary', 'Google Auth'],
-    demoLink: 'https://ease-nest.netlify.app/login',
-    githubLink: 'https://ease-nest.netlify.app/login',
-    // featured: true,
+      'TrendingNewsFeed.in brings you breaking news, viral stories, live news, politics, cricket, Bollywood, tech, latest trending headlines across India.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Google App Script'],
+    image: 'https://images.app.goo.gl/zHgsXkLmHmjWaCUB9',
+    demoLink: 'https://www.trendingnewsfeed.in',
+    githubLink: 'https://github.com/ashvinupadhyay1132',
+    featured: true,
   },
   {
     id: 4,
     title: 'EasyCV - Resume Maker',
     description:
       'A modern resume builder with customizable templates, real-time preview, and PDF export. Create professional, ATS-friendly CVs with multiple themes.',
+    tags: ['React', 'Redux', 'HTML', 'CSS', 'JavaScript'],
     image:
       'https://images01.nicepagecdn.com/page/15/45/website-design-preview-154534.jpg',
-    tags: ['React','Redux','HTML','CSS','JavaScript'],
     demoLink: 'https://testanalytics-5e6e3.web.app/',
     githubLink: 'https://github.com/ashvinupadhyay1132/Resume-Builder',
-    // featured: true,
   },
   {
     id: 5,
     title: 'Job Hunt',
     description:
       'A job portal application built using the MERN stack (MongoDB, Express.js, React, Node.js). This application allows recruiters to create and manage the jobs, and for employers to post job listings.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Multer'],
     image:
       'https://cdn.dribbble.com/users/3400958/screenshots/19338701/media/fdf7a4ba598c8b43cce9c7a2ccf67639.png',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Multer'],
     demoLink: 'https://mern-app-job-portal.vercel.app/',
     githubLink: 'https://mern-app-job-portal.vercel.app/',
   },
   {
     id: 6,
-
-    title: 'Trending News Feed',
-
+    title: 'Airbnb',
     description:
-      'TrendingNewsFeed.in brings you breaking news, viral stories, live news, politics, cricket, Bollywood, tech, latest trending headlines across India.',
-
-    image: 'https://images.app.goo.gl/zHgsXkLmHmjWaCUB9',
-
-    tags: ['HTML', 'CSS', 'JavaScript', 'Google App Script'],
-
-    demoLink: 'https://www.trendingnewsfeed.in',
-    githubLink: 'https://github.com/ashvinupadhyay1132',
+      'A full-featured accommodation booking platform with property listings, user authentication, real-time booking, and secure payments. Includes image uploads and Google authentication.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind', 'Shadcn', 'JWT', 'Cloudinary', 'Google Auth'],
+    image:
+      'https://mir-s3-cdn-cf.behance.net/project_modules/1400/a1814a112355529.603d82c702de5.jpg',
+    demoLink: 'https://ease-nest.netlify.app/login',
+    githubLink: 'https://ease-nest.netlify.app/login',
   },
-    featured: true,
 ];
