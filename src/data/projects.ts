@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description:
       'TrendingNewsFeed.in brings you breaking news, viral stories, live news, politics, cricket, Bollywood, tech, latest trending headlines across India.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Google App Script'],
-    image: 'https://images.app.goo.gl/zHgsXkLmHmjWaCUB9',
+    image: 'https://cdn.dribbble.com/userupload/4908072/file/original-c52d6f7eed0dbbc7846c9d27f060c1f1.png?resize=752x&vertical=center',
     demoLink: 'https://www.trendingnewsfeed.in',
     githubLink: 'https://github.com/ashvinupadhyay1132',
     featured: true,
