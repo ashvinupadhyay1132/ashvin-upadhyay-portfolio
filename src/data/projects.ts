@@ -22,14 +22,14 @@ export const projects: Project[] = [
       "A content management system for blogs with markdown support, image uploads, user roles, and SEO optimization.",
     image:
       "https://cdn.dribbble.com/userupload/4171124/file/original-345de0be93c3ac84e27f202fd13b7ee6.jpg?format=webp&resize=400x300&vertical=center",
-    tags: ['React','Node.js','Express','MongoDB','Cloudinary','JWT','Material UI'],
+    tags: ['Next.js','Node.js','Express','MongoDB','Cloudinary','JWT','Material UI', 'Shadcn'],
     demoLink: "https://www.newshunt.blog/",
     githubLink: "https://github.com/ashvinupadhyay1132",
     featured: true,
   },
   {
     id: 3,
-    title: 'Airbnb Clone',
+    title: 'Airbnb',
     description:
       'A full-featured accommodation booking platform with property listings, user authentication, real-time booking, and secure payments. Includes image uploads and Google authentication.',
     image:
