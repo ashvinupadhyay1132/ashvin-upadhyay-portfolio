@@ -68,7 +68,7 @@ export const projects: Project[] = [
     title: 'Trending News Feed',
 
     description:
-      'TrendingNewsFeed.in brings you breaking news, viral stories, live news, politics, cricket, Bollywood, tech,today's trending headlines across India.',
+      'TrendingNewsFeed.in brings you breaking news, viral stories, live news, politics, cricket, Bollywood, tech, latest trending headlines across India.',
 
     image: 'https://images.app.goo.gl/zHgsXkLmHmjWaCUB9',
 
