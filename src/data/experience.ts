@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     id: 1,
     company: 'SWEAP – Upwork Enterprise Client',
-    position: 'Freelance AI Software Engineer',
+    position: 'AI Software Engineer',
     duration: 'Jun 2025 – Present',
     description:
       'Developed annotated technical prompts to enhance LLM performance in software development. Conducted QA on AI-generated outputs for clarity, accuracy, and brevity. Supported AI model training using platforms like Outlier and ScaleAI.',
