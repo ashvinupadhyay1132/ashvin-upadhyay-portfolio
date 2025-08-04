@@ -1,103 +1,86 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const CustomCursor: React.FC = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hidden, setHidden] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
+  const cursorInnerRef = useRef<HTMLDivElement>(null);
+  const cursorOuterRef = useRef<HTMLDivElement>(null);
+  const positionRef = useRef({ x: 0, y: 0 });
+
   useEffect(() => {
-    // Check if device is mobile or tablet
     const checkDevice = () => {
       setIsMobileOrTablet(window.innerWidth < 1024);
     };
 
-    // Initial check
     checkDevice();
-
-    // Add resize listener
     window.addEventListener('resize', checkDevice);
 
-    // Don't add other listeners if on mobile/tablet
     if (isMobileOrTablet) {
       return () => window.removeEventListener('resize', checkDevice);
     }
 
-    // Rest of the cursor logic
-    const addEventListeners = () => {
-      document.addEventListener('mousemove', onMouseMove);
-      document.addEventListener('mouseenter', onMouseEnter);
-      document.addEventListener('mouseleave', onMouseLeave);
-      document.addEventListener('mousedown', onMouseDown);
-      document.addEventListener('mouseup', onMouseUp);
-    };
-
     const onMouseMove = (e: MouseEvent) => {
-      // Ensure cursor is always visible during movement
-      requestAnimationFrame(() => {
-        setPosition({ x: e.clientX, y: e.clientY });
-        setHidden(false);
-      });
+      positionRef.current = { x: e.clientX, y: e.clientY };
+      setHidden(false); // Only toggle visibility, don't set position here
     };
 
-    const removeEventListeners = () => {
+    const onMouseEnter = () => setHidden(false);
+    const onMouseLeave = () => setHidden(true);
+    const onMouseDown = () => setClicked(true);
+    const onMouseUp = () => setClicked(false);
+
+    const updateLinkHovered = () => {
+      const hoveredElements = document.querySelectorAll(
+        'a:hover, button:hover, .hoverable:hover, input:hover, textarea:hover, select:hover, [role="button"]:hover, nav a:hover'
+      );
+      setLinkHovered(hoveredElements.length > 0);
+    };
+
+    const moveCursor = () => {
+      const { x, y } = positionRef.current;
+      if (cursorInnerRef.current)
+        cursorInnerRef.current.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+      if (cursorOuterRef.current)
+        cursorOuterRef.current.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+      requestAnimationFrame(moveCursor);
+    };
+
+    // Attach listeners
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseenter', onMouseEnter);
+    document.addEventListener('mouseleave', onMouseLeave);
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('mouseup', onMouseUp);
+
+    const interval = setInterval(updateLinkHovered, 50);
+    moveCursor(); // Start cursor loop
+
+    return () => {
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseenter', onMouseEnter);
       document.removeEventListener('mouseleave', onMouseLeave);
       document.removeEventListener('mousedown', onMouseDown);
       document.removeEventListener('mouseup', onMouseUp);
-    };
-
-    const onMouseEnter = () => {
-      setHidden(false);
-    };
-
-    const onMouseLeave = () => {
-      setHidden(true);
-    };
-
-    const onMouseDown = () => {
-      setClicked(true);
-    };
-
-    const onMouseUp = () => {
-      setClicked(false);
-    };
-
-    const updateLinkHovered = () => {
-      const hoveredElements = document.querySelectorAll('a:hover, button:hover, .hoverable:hover, input, textarea, select, [role="button"]:hover, nav a:hover');
-      setLinkHovered(hoveredElements.length > 0);
-    };
-
-    addEventListeners();
-    const interval = setInterval(updateLinkHovered, 50);
-
-    return () => {
-      removeEventListeners();
       clearInterval(interval);
       window.removeEventListener('resize', checkDevice);
     };
   }, [isMobileOrTablet]);
 
-  // Don't render cursor on mobile/tablet
-  if (isMobileOrTablet) {
-    return null;
-  }
+  if (isMobileOrTablet) return null;
 
   return (
     <>
-      {/* Outer cursor ring */}
       <div
+        ref={cursorOuterRef}
         className={`custom-cursor-outer fixed pointer-events-none z-[9999] ${
           hidden ? 'opacity-0' : 'opacity-100'
         } ${clicked ? 'scale-75' : ''} ${linkHovered ? 'scale-150' : ''}`}
         style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
           width: '40px',
           height: '40px',
-          transform: 'translate(-50%, -50%)',
           transition: 'all 0.15s ease-out, opacity 0.3s ease-in-out',
           willChange: 'transform',
         }}
@@ -117,19 +100,16 @@ const CustomCursor: React.FC = () => {
         </svg>
       </div>
 
-      {/* Inner cursor dot */}
       <div
+        ref={cursorInnerRef}
         className={`custom-cursor-inner fixed pointer-events-none z-[9999] ${
           hidden ? 'opacity-0' : 'opacity-100'
         } ${clicked ? 'scale-50' : ''} ${linkHovered ? 'scale-0' : ''}`}
         style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
           width: '6px',
           height: '6px',
           backgroundColor: 'rgb(79, 70, 229)',
           borderRadius: '50%',
-          transform: 'translate(-50%, -50%)',
           transition: 'all 0.1s ease-out',
           boxShadow: '0 0 10px rgba(79, 70, 229, 0.3)',
           willChange: 'transform',
