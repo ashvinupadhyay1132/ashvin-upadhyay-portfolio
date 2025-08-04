@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     description:
       'Developed annotated technical prompts to enhance LLM performance in software development. Conducted QA on AI-generated outputs for clarity, accuracy, and brevity. Supported AI model training using platforms like Outlier and ScaleAI.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Outlier', 'ScaleAI', 'LLMs', 'Prompt Engineering', 'QA Evaluation'],
-    logoUrl: 'https://w7.pngwing.com/pngs/744/960/png-transparent-upwork-computer-icons-freelancer-others-thumbnail.png',
+    logoUrl: 'https://www.sweap.io/assets/styleguide/sweap-logo-compact-onlight-rgb.svg',
   },
   {
     id: 2,
