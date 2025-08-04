@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
     duration: 'Jun 2025 – Present',
     description:
       'Developed annotated technical prompts to enhance LLM performance in software development. Conducted QA on AI-generated outputs for clarity, accuracy, and brevity. Supported AI model training using platforms like Outlier and ScaleAI.',
-    technologies: ['Outlier', 'ScaleAI', 'LLMs', 'Prompt Engineering', 'QA Evaluation'],
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Outlier', 'ScaleAI', 'LLMs', 'Prompt Engineering', 'QA Evaluation'],
     logoUrl: 'https://w7.pngwing.com/pngs/744/960/png-transparent-upwork-computer-icons-freelancer-others-thumbnail.png',
   },
   {
